@@ -1,0 +1,443 @@
+Myanna Harris
+Kristina Spring
+
+HW 5
+
+Log / Prunning / output
+
+1)  The algorithm works well for titanic data
+    The helper methods were nice
+    Treating everything as categorical makes it easier
+    
+2)  MPG is harder
+    The accuracy is bad
+    I'm not sure why the Enew is calculated badly for MPG, the log seems to have problems
+    
+3)  This was okay
+    Used a queue and recursion
+    This project lends itself well to recursion
+    This we did before 2 and it helped with debugging
+    
+Part 3 Prunning:
+
+1) Titanic
+For males, we can prune all att3's becuase it doesn't change the class.
+For females who are second or third class we can prune att3's becuase it doesn't change the class.
+
+IF att1 = male and att2 = second THEN class = yes
+IF att1 = male and att2 = crew THEN class = no
+IF att1 = male and att2 = third THEN class = no
+IF att1 = male and att2 = first THEN class = no
+IF att1 = female and att2 = second THEN class = yes
+IF att1 = female and att2 = crew and att3 = adult THEN class = yes
+IF att1 = female and att2 = crew and att3 = child THEN class = no
+IF att1 = female and att2 = third THEN class = yes
+IF att1 = female and att2 = first and att3 = adult THEN class = yes
+IF att1 = female and att2 = first and att3 = child THEN class = no
+
+2) MPG
+We can prune a lot of the att3's because they dont change the class for cetain combinations of att1 and att2.
+
+IF att1 = 1 and att2 = 77 THEN class = 8
+IF att1 = 1 and att2 = 76 THEN class = 8
+IF att1 = 1 and att2 = 75 THEN class = 8
+IF att1 = 1 and att2 = 74 THEN class = 8
+IF att1 = 1 and att2 = 73 THEN class = 7
+IF att1 = 1 and att2 = 72 THEN class = 8
+IF att1 = 1 and att2 = 71 THEN class = 8
+IF att1 = 1 and att2 = 70 THEN class = 6
+IF att1 = 1 and att2 = 79 THEN class = 8
+IF att1 = 1 and att2 = 78 THEN class = 9
+IF att1 = 3 and att2 = 77 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 77 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 77 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 77 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 77 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 76 and att3 = 8 THEN class = 4
+IF att1 = 3 and att2 = 76 and att3 = 3 THEN class = 4
+IF att1 = 3 and att2 = 76 and att3 = 5 THEN class = 4
+IF att1 = 3 and att2 = 76 and att3 = 4 THEN class = 7
+IF att1 = 3 and att2 = 76 and att3 = 6 THEN class = 4
+IF att1 = 3 and att2 = 75 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 74 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 73 THEN class = 5
+IF att1 = 3 and att2 = 72 THEN class = 5
+IF att1 = 3 and att2 = 71 THEN class = 4
+IF att1 = 3 and att2 = 70 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 70 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 70 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 70 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 70 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 79 THEN class = 7
+IF att1 = 3 and att2 = 78 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 78 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 78 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 78 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 78 and att3 = 6 THEN class = 5
+IF att1 = 2 and att2 = 77 THEN class = 8
+IF att1 = 2 and att2 = 76 THEN class = 7
+IF att1 = 2 and att2 = 75 THEN class = 7
+IF att1 = 2 and att2 = 74 THEN class = 6
+IF att1 = 2 and att2 = 73 and att3 = 8 THEN class = 5
+IF att1 = 2 and att2 = 73 and att3 = 3 THEN class = 4
+IF att1 = 2 and att2 = 73 and att3 = 5 THEN class = 5
+IF att1 = 2 and att2 = 73 and att3 = 4 THEN class = 5
+IF att1 = 2 and att2 = 73 and att3 = 6 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 8 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 3 THEN class = 4
+IF att1 = 2 and att2 = 72 and att3 = 5 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 4 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 6 THEN class = 5
+IF att1 = 2 and att2 = 71 THEN class = 7
+IF att1 = 2 and att2 = 70 THEN class = 6
+IF att1 = 2 and att2 = 79 THEN class = 8
+IF att1 = 2 and att2 = 78 THEN class = 7
+IF att1 = 5 and att2 = 77 and att3 = 8 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 3 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 5 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 4 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 6 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 8 THEN class = 1
+IF att1 = 5 and att2 = 76 and att3 = 3 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 5 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 4 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 6 THEN class = 4
+IF att1 = 5 and att2 = 75 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 8 THEN class = 2
+IF att1 = 5 and att2 = 74 and att3 = 3 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 5 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 4 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 6 THEN class = 3
+IF att1 = 5 and att2 = 73 THEN class = 1
+IF att1 = 5 and att2 = 72 THEN class = 1
+IF att1 = 5 and att2 = 71 THEN class = 2
+IF att1 = 5 and att2 = 70 THEN class = 3
+IF att1 = 5 and att2 = 79 and att3 = 8 THEN class = 4
+IF att1 = 5 and att2 = 79 and att3 = 3 THEN class = 4
+IF att1 = 5 and att2 = 79 and att3 = 5 THEN class = 6
+IF att1 = 5 and att2 = 79 and att3 = 4 THEN class = 4
+IF att1 = 5 and att2 = 79 and att3 = 6 THEN class = 4
+IF att1 = 5 and att2 = 78 THEN class = 5
+IF att1 = 4 and att2 = 77 THEN class = 5
+IF att1 = 4 and att2 = 76 THEN class = 5
+IF att1 = 4 and att2 = 75 and att3 = 8 THEN class = 1
+IF att1 = 4 and att2 = 75 and att3 = 3 THEN class = 4
+IF att1 = 4 and att2 = 75 and att3 = 5 THEN class = 4
+IF att1 = 4 and att2 = 75 and att3 = 4 THEN class = 4
+IF att1 = 4 and att2 = 75 and att3 = 6 THEN class = 4
+IF att1 = 4 and att2 = 74 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 8 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 3 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 5 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 4 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 6 THEN class = 4
+IF att1 = 4 and att2 = 72 THEN class = 4
+IF att1 = 4 and att2 = 71 THEN class = 4
+IF att1 = 4 and att2 = 70 THEN class = 4
+IF att1 = 4 and att2 = 79 and att3 = 8 THEN class = 6
+IF att1 = 4 and att2 = 79 and att3 = 3 THEN class = 5
+IF att1 = 4 and att2 = 79 and att3 = 5 THEN class = 5
+IF att1 = 4 and att2 = 79 and att3 = 4 THEN class = 7
+IF att1 = 4 and att2 = 79 and att3 = 6 THEN class = 5
+IF att1 = 4 and att2 = 78 THEN class = 5
+
+Output:
+
+===========================================
+STEP 1: Titanic Dataset
+===========================================
+   Stratified 10-fold Cross Validation
+      Descision Tree: accuracy: 0.790549750114, error rate: 0.209450249886
+Descision Tree (Stratified 10-Fold cross Validation Results) :
+==========  ====  =====  =======  =================
+Survival      No    Yes    Total    Recognition (%)
+==========  ====  =====  =======  =================
+No           270    441      270            26.4972
+Yes           20   1470     1470            48.0603
+==========  ====  =====  =======  =================
+
+Rules: 
+IF att1 = male and att2 = second and att3 = adult THEN class = yes
+IF att1 = male and att2 = second and att3 = child THEN class = yes
+IF att1 = male and att2 = crew and att3 = adult THEN class = no
+IF att1 = male and att2 = crew and att3 = child THEN class = no
+IF att1 = male and att2 = third and att3 = adult THEN class = no
+IF att1 = male and att2 = third and att3 = child THEN class = no
+IF att1 = male and att2 = first and att3 = adult THEN class = no
+IF att1 = male and att2 = first and att3 = child THEN class = no
+IF att1 = female and att2 = second and att3 = adult THEN class = yes
+IF att1 = female and att2 = second and att3 = child THEN class = yes
+IF att1 = female and att2 = crew and att3 = adult THEN class = yes
+IF att1 = female and att2 = crew and att3 = child THEN class = no
+IF att1 = female and att2 = third and att3 = adult THEN class = yes
+IF att1 = female and att2 = third and att3 = child THEN class = yes
+IF att1 = female and att2 = first and att3 = adult THEN class = yes
+IF att1 = female and att2 = first and att3 = child THEN class = no
+===========================================
+STEP 2: Car Dataset
+===========================================
+   Stratified 10-fold Cross Validation
+      Descision Tree: accuracy: 0.447619047619, error rate: 0.552380952381
+Descision Tree (Stratified 10-Fold cross Validation Results) :
+=====  ===  ===  ===  ===  ===  ===  ===  ===  ===  ====  =======  =================
+  MPG    1    2    3    4    5    6    7    8    9    10    Total    Recognition (%)
+=====  ===  ===  ===  ===  ===  ===  ===  ===  ===  ====  =======  =================
+    1   22    4    6    1    0    0    0    0    0     0       22            66.6667
+    2   10    4    4    1    0    0    0    0    0     0        4            21.0526
+    3   11    1   12   10    1    0    0    0    0     0       12            34.2857
+    4    5    0   12   24   17    1    1    0    0     0       24            40
+    5    0    0    1   13   37    4    4    1    0     0       37            61.6667
+    6    0    0    0    1   16   12    9    5    0     0       12            27.907
+    7    0    0    0    0    6    7   12    9    0     0       12            35.2941
+    8    0    0    0    0    0    2    7   15    2     0       15            57.6923
+    9    0    0    0    0    0    0    1    1    3     0        3            60
+   10    0    0    0    0    0    0    0    0    0     0        0             0
+=====  ===  ===  ===  ===  ===  ===  ===  ===  ===  ====  =======  =================
+
+Rules: 
+IF att1 = 1 and att2 = 77 and att3 = 8 THEN class = 8
+IF att1 = 1 and att2 = 77 and att3 = 3 THEN class = 8
+IF att1 = 1 and att2 = 77 and att3 = 5 THEN class = 8
+IF att1 = 1 and att2 = 77 and att3 = 4 THEN class = 8
+IF att1 = 1 and att2 = 77 and att3 = 6 THEN class = 8
+IF att1 = 1 and att2 = 76 and att3 = 8 THEN class = 8
+IF att1 = 1 and att2 = 76 and att3 = 3 THEN class = 8
+IF att1 = 1 and att2 = 76 and att3 = 5 THEN class = 8
+IF att1 = 1 and att2 = 76 and att3 = 4 THEN class = 8
+IF att1 = 1 and att2 = 76 and att3 = 6 THEN class = 8
+IF att1 = 1 and att2 = 75 and att3 = 8 THEN class = 8
+IF att1 = 1 and att2 = 75 and att3 = 3 THEN class = 8
+IF att1 = 1 and att2 = 75 and att3 = 5 THEN class = 8
+IF att1 = 1 and att2 = 75 and att3 = 4 THEN class = 8
+IF att1 = 1 and att2 = 75 and att3 = 6 THEN class = 8
+IF att1 = 1 and att2 = 74 and att3 = 8 THEN class = 8
+IF att1 = 1 and att2 = 74 and att3 = 3 THEN class = 8
+IF att1 = 1 and att2 = 74 and att3 = 5 THEN class = 8
+IF att1 = 1 and att2 = 74 and att3 = 4 THEN class = 8
+IF att1 = 1 and att2 = 74 and att3 = 6 THEN class = 8
+IF att1 = 1 and att2 = 73 and att3 = 8 THEN class = 7
+IF att1 = 1 and att2 = 73 and att3 = 3 THEN class = 7
+IF att1 = 1 and att2 = 73 and att3 = 5 THEN class = 7
+IF att1 = 1 and att2 = 73 and att3 = 4 THEN class = 7
+IF att1 = 1 and att2 = 73 and att3 = 6 THEN class = 7
+IF att1 = 1 and att2 = 72 THEN class = 8
+IF att1 = 1 and att2 = 71 and att3 = 8 THEN class = 8
+IF att1 = 1 and att2 = 71 and att3 = 3 THEN class = 8
+IF att1 = 1 and att2 = 71 and att3 = 5 THEN class = 8
+IF att1 = 1 and att2 = 71 and att3 = 4 THEN class = 8
+IF att1 = 1 and att2 = 71 and att3 = 6 THEN class = 8
+IF att1 = 1 and att2 = 70 and att3 = 8 THEN class = 6
+IF att1 = 1 and att2 = 70 and att3 = 3 THEN class = 6
+IF att1 = 1 and att2 = 70 and att3 = 5 THEN class = 6
+IF att1 = 1 and att2 = 70 and att3 = 4 THEN class = 6
+IF att1 = 1 and att2 = 70 and att3 = 6 THEN class = 6
+IF att1 = 1 and att2 = 79 and att3 = 8 THEN class = 8
+IF att1 = 1 and att2 = 79 and att3 = 3 THEN class = 8
+IF att1 = 1 and att2 = 79 and att3 = 5 THEN class = 8
+IF att1 = 1 and att2 = 79 and att3 = 4 THEN class = 8
+IF att1 = 1 and att2 = 79 and att3 = 6 THEN class = 8
+IF att1 = 1 and att2 = 78 and att3 = 8 THEN class = 9
+IF att1 = 1 and att2 = 78 and att3 = 3 THEN class = 9
+IF att1 = 1 and att2 = 78 and att3 = 5 THEN class = 9
+IF att1 = 1 and att2 = 78 and att3 = 4 THEN class = 9
+IF att1 = 1 and att2 = 78 and att3 = 6 THEN class = 9
+IF att1 = 3 and att2 = 77 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 77 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 77 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 77 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 77 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 76 and att3 = 8 THEN class = 4
+IF att1 = 3 and att2 = 76 and att3 = 3 THEN class = 4
+IF att1 = 3 and att2 = 76 and att3 = 5 THEN class = 4
+IF att1 = 3 and att2 = 76 and att3 = 4 THEN class = 7
+IF att1 = 3 and att2 = 76 and att3 = 6 THEN class = 4
+IF att1 = 3 and att2 = 75 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 75 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 75 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 75 and att3 = 4 THEN class = 5
+IF att1 = 3 and att2 = 75 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 74 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 74 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 73 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 73 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 73 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 73 and att3 = 4 THEN class = 5
+IF att1 = 3 and att2 = 73 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 72 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 72 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 72 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 72 and att3 = 4 THEN class = 5
+IF att1 = 3 and att2 = 72 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 71 and att3 = 8 THEN class = 4
+IF att1 = 3 and att2 = 71 and att3 = 3 THEN class = 4
+IF att1 = 3 and att2 = 71 and att3 = 5 THEN class = 4
+IF att1 = 3 and att2 = 71 and att3 = 4 THEN class = 4
+IF att1 = 3 and att2 = 71 and att3 = 6 THEN class = 4
+IF att1 = 3 and att2 = 70 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 70 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 70 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 70 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 70 and att3 = 6 THEN class = 5
+IF att1 = 3 and att2 = 79 and att3 = 8 THEN class = 7
+IF att1 = 3 and att2 = 79 and att3 = 3 THEN class = 7
+IF att1 = 3 and att2 = 79 and att3 = 5 THEN class = 7
+IF att1 = 3 and att2 = 79 and att3 = 4 THEN class = 7
+IF att1 = 3 and att2 = 79 and att3 = 6 THEN class = 7
+IF att1 = 3 and att2 = 78 and att3 = 8 THEN class = 5
+IF att1 = 3 and att2 = 78 and att3 = 3 THEN class = 5
+IF att1 = 3 and att2 = 78 and att3 = 5 THEN class = 5
+IF att1 = 3 and att2 = 78 and att3 = 4 THEN class = 6
+IF att1 = 3 and att2 = 78 and att3 = 6 THEN class = 5
+IF att1 = 2 and att2 = 77 and att3 = 8 THEN class = 8
+IF att1 = 2 and att2 = 77 and att3 = 3 THEN class = 8
+IF att1 = 2 and att2 = 77 and att3 = 5 THEN class = 8
+IF att1 = 2 and att2 = 77 and att3 = 4 THEN class = 8
+IF att1 = 2 and att2 = 77 and att3 = 6 THEN class = 8
+IF att1 = 2 and att2 = 76 and att3 = 8 THEN class = 7
+IF att1 = 2 and att2 = 76 and att3 = 3 THEN class = 7
+IF att1 = 2 and att2 = 76 and att3 = 5 THEN class = 7
+IF att1 = 2 and att2 = 76 and att3 = 4 THEN class = 7
+IF att1 = 2 and att2 = 76 and att3 = 6 THEN class = 7
+IF att1 = 2 and att2 = 75 and att3 = 8 THEN class = 7
+IF att1 = 2 and att2 = 75 and att3 = 3 THEN class = 7
+IF att1 = 2 and att2 = 75 and att3 = 5 THEN class = 7
+IF att1 = 2 and att2 = 75 and att3 = 4 THEN class = 7
+IF att1 = 2 and att2 = 75 and att3 = 6 THEN class = 7
+IF att1 = 2 and att2 = 74 and att3 = 8 THEN class = 6
+IF att1 = 2 and att2 = 74 and att3 = 3 THEN class = 6
+IF att1 = 2 and att2 = 74 and att3 = 5 THEN class = 6
+IF att1 = 2 and att2 = 74 and att3 = 4 THEN class = 6
+IF att1 = 2 and att2 = 74 and att3 = 6 THEN class = 6
+IF att1 = 2 and att2 = 73 and att3 = 8 THEN class = 5
+IF att1 = 2 and att2 = 73 and att3 = 3 THEN class = 4
+IF att1 = 2 and att2 = 73 and att3 = 5 THEN class = 5
+IF att1 = 2 and att2 = 73 and att3 = 4 THEN class = 5
+IF att1 = 2 and att2 = 73 and att3 = 6 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 8 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 3 THEN class = 4
+IF att1 = 2 and att2 = 72 and att3 = 5 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 4 THEN class = 5
+IF att1 = 2 and att2 = 72 and att3 = 6 THEN class = 5
+IF att1 = 2 and att2 = 71 and att3 = 8 THEN class = 7
+IF att1 = 2 and att2 = 71 and att3 = 3 THEN class = 7
+IF att1 = 2 and att2 = 71 and att3 = 5 THEN class = 7
+IF att1 = 2 and att2 = 71 and att3 = 4 THEN class = 7
+IF att1 = 2 and att2 = 71 and att3 = 6 THEN class = 7
+IF att1 = 2 and att2 = 70 and att3 = 8 THEN class = 6
+IF att1 = 2 and att2 = 70 and att3 = 3 THEN class = 6
+IF att1 = 2 and att2 = 70 and att3 = 5 THEN class = 6
+IF att1 = 2 and att2 = 70 and att3 = 4 THEN class = 6
+IF att1 = 2 and att2 = 70 and att3 = 6 THEN class = 6
+IF att1 = 2 and att2 = 79 and att3 = 8 THEN class = 8
+IF att1 = 2 and att2 = 79 and att3 = 3 THEN class = 8
+IF att1 = 2 and att2 = 79 and att3 = 5 THEN class = 8
+IF att1 = 2 and att2 = 79 and att3 = 4 THEN class = 8
+IF att1 = 2 and att2 = 79 and att3 = 6 THEN class = 8
+IF att1 = 2 and att2 = 78 and att3 = 8 THEN class = 7
+IF att1 = 2 and att2 = 78 and att3 = 3 THEN class = 7
+IF att1 = 2 and att2 = 78 and att3 = 5 THEN class = 7
+IF att1 = 2 and att2 = 78 and att3 = 4 THEN class = 7
+IF att1 = 2 and att2 = 78 and att3 = 6 THEN class = 7
+IF att1 = 5 and att2 = 77 and att3 = 8 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 3 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 5 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 4 THEN class = 3
+IF att1 = 5 and att2 = 77 and att3 = 6 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 8 THEN class = 1
+IF att1 = 5 and att2 = 76 and att3 = 3 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 5 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 4 THEN class = 4
+IF att1 = 5 and att2 = 76 and att3 = 6 THEN class = 4
+IF att1 = 5 and att2 = 75 and att3 = 8 THEN class = 3
+IF att1 = 5 and att2 = 75 and att3 = 3 THEN class = 3
+IF att1 = 5 and att2 = 75 and att3 = 5 THEN class = 3
+IF att1 = 5 and att2 = 75 and att3 = 4 THEN class = 3
+IF att1 = 5 and att2 = 75 and att3 = 6 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 8 THEN class = 2
+IF att1 = 5 and att2 = 74 and att3 = 3 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 5 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 4 THEN class = 3
+IF att1 = 5 and att2 = 74 and att3 = 6 THEN class = 3
+IF att1 = 5 and att2 = 73 and att3 = 8 THEN class = 1
+IF att1 = 5 and att2 = 73 and att3 = 3 THEN class = 1
+IF att1 = 5 and att2 = 73 and att3 = 5 THEN class = 1
+IF att1 = 5 and att2 = 73 and att3 = 4 THEN class = 1
+IF att1 = 5 and att2 = 73 and att3 = 6 THEN class = 1
+IF att1 = 5 and att2 = 72 and att3 = 8 THEN class = 1
+IF att1 = 5 and att2 = 72 and att3 = 3 THEN class = 1
+IF att1 = 5 and att2 = 72 and att3 = 5 THEN class = 1
+IF att1 = 5 and att2 = 72 and att3 = 4 THEN class = 1
+IF att1 = 5 and att2 = 72 and att3 = 6 THEN class = 1
+IF att1 = 5 and att2 = 71 and att3 = 8 THEN class = 2
+IF att1 = 5 and att2 = 71 and att3 = 3 THEN class = 2
+IF att1 = 5 and att2 = 71 and att3 = 5 THEN class = 2
+IF att1 = 5 and att2 = 71 and att3 = 4 THEN class = 2
+IF att1 = 5 and att2 = 71 and att3 = 6 THEN class = 2
+IF att1 = 5 and att2 = 70 and att3 = 8 THEN class = 3
+IF att1 = 5 and att2 = 70 and att3 = 3 THEN class = 3
+IF att1 = 5 and att2 = 70 and att3 = 5 THEN class = 3
+IF att1 = 5 and att2 = 70 and att3 = 4 THEN class = 3
+IF att1 = 5 and att2 = 70 and att3 = 6 THEN class = 3
+IF att1 = 5 and att2 = 79 and att3 = 8 THEN class = 4
+IF att1 = 5 and att2 = 79 and att3 = 3 THEN class = 4
+IF att1 = 5 and att2 = 79 and att3 = 5 THEN class = 6
+IF att1 = 5 and att2 = 79 and att3 = 4 THEN class = 4
+IF att1 = 5 and att2 = 79 and att3 = 6 THEN class = 4
+IF att1 = 5 and att2 = 78 and att3 = 8 THEN class = 5
+IF att1 = 5 and att2 = 78 and att3 = 3 THEN class = 5
+IF att1 = 5 and att2 = 78 and att3 = 5 THEN class = 5
+IF att1 = 5 and att2 = 78 and att3 = 4 THEN class = 5
+IF att1 = 5 and att2 = 78 and att3 = 6 THEN class = 5
+IF att1 = 4 and att2 = 77 and att3 = 8 THEN class = 5
+IF att1 = 4 and att2 = 77 and att3 = 3 THEN class = 5
+IF att1 = 4 and att2 = 77 and att3 = 5 THEN class = 5
+IF att1 = 4 and att2 = 77 and att3 = 4 THEN class = 5
+IF att1 = 4 and att2 = 77 and att3 = 6 THEN class = 5
+IF att1 = 4 and att2 = 76 and att3 = 8 THEN class = 5
+IF att1 = 4 and att2 = 76 and att3 = 3 THEN class = 5
+IF att1 = 4 and att2 = 76 and att3 = 5 THEN class = 5
+IF att1 = 4 and att2 = 76 and att3 = 4 THEN class = 5
+IF att1 = 4 and att2 = 76 and att3 = 6 THEN class = 5
+IF att1 = 4 and att2 = 75 and att3 = 8 THEN class = 1
+IF att1 = 4 and att2 = 75 and att3 = 3 THEN class = 4
+IF att1 = 4 and att2 = 75 and att3 = 5 THEN class = 4
+IF att1 = 4 and att2 = 75 and att3 = 4 THEN class = 4
+IF att1 = 4 and att2 = 75 and att3 = 6 THEN class = 4
+IF att1 = 4 and att2 = 74 and att3 = 8 THEN class = 3
+IF att1 = 4 and att2 = 74 and att3 = 3 THEN class = 3
+IF att1 = 4 and att2 = 74 and att3 = 5 THEN class = 3
+IF att1 = 4 and att2 = 74 and att3 = 4 THEN class = 3
+IF att1 = 4 and att2 = 74 and att3 = 6 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 8 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 3 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 5 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 4 THEN class = 3
+IF att1 = 4 and att2 = 73 and att3 = 6 THEN class = 4
+IF att1 = 4 and att2 = 72 THEN class = 4
+IF att1 = 4 and att2 = 71 and att3 = 8 THEN class = 4
+IF att1 = 4 and att2 = 71 and att3 = 3 THEN class = 4
+IF att1 = 4 and att2 = 71 and att3 = 5 THEN class = 4
+IF att1 = 4 and att2 = 71 and att3 = 4 THEN class = 4
+IF att1 = 4 and att2 = 71 and att3 = 6 THEN class = 4
+IF att1 = 4 and att2 = 70 and att3 = 8 THEN class = 4
+IF att1 = 4 and att2 = 70 and att3 = 3 THEN class = 4
+IF att1 = 4 and att2 = 70 and att3 = 5 THEN class = 4
+IF att1 = 4 and att2 = 70 and att3 = 4 THEN class = 4
+IF att1 = 4 and att2 = 70 and att3 = 6 THEN class = 4
+IF att1 = 4 and att2 = 79 and att3 = 8 THEN class = 6
+IF att1 = 4 and att2 = 79 and att3 = 3 THEN class = 5
+IF att1 = 4 and att2 = 79 and att3 = 5 THEN class = 5
+IF att1 = 4 and att2 = 79 and att3 = 4 THEN class = 7
+IF att1 = 4 and att2 = 79 and att3 = 6 THEN class = 5
+IF att1 = 4 and att2 = 78 and att3 = 8 THEN class = 5
+IF att1 = 4 and att2 = 78 and att3 = 3 THEN class = 5
+IF att1 = 4 and att2 = 78 and att3 = 5 THEN class = 5
+IF att1 = 4 and att2 = 78 and att3 = 4 THEN class = 5
+IF att1 = 4 and att2 = 78 and att3 = 6 THEN class = 5

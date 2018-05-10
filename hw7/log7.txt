@@ -1,0 +1,64 @@
+Myanna Harris
+Kristina Spring
+
+HW 7
+
+Log
+
+- Formatted output using tabulate
+- Made dictionary for meaning of values of the mushroom data
+- Separated making sets and making rules from those sets
+- Making the sets was not too hard because we had information from class
+- Making the rules, we used itertools to help get all combinations of the items
+- We had trouble with getting indices to be correct when dealing with the 
+    multi-layered lists
+- Making the rules required we use an iterator instead of immediately storing 
+    information in lists because it would cause a memory error
+- 
+- The titanic dataset does not take very long
+- The mushroom dataset takes a lot longer
+    - This makes sense since it has so many more attributes and therefore
+        more combinations
+
+Findings from rules:
+    For Titanic, the rules with the highest support and confidence related to 
+Adult females surviving.  This makes sense to us, since often women were given
+priority on lifeboats.  Lowering the support brings most rules to include the
+age being adult, which makes sense since most people on the Titanic were adults,
+so there is still confidence there.  It's hard to compare these rules to HW4, 
+since there are no similar rules or analysis of relationships between attributes
+to compare to.  HW5 can be compared to some, but most rules with good confidence
+ and support don't have survival as the right hand side.  The rules that do - 
+adults and females surviving - make sense in relation to the rules created in 
+HW 5, which have all female adults surviving.  The HW 5 rules have barely any
+men surviving, only men of the second class.
+    For the mushroom dataset, we initially only used the Edibleness, Cap-color, 
+Odor, and Habitat attributes.  The most confident, supported rules were about 
+edible mushrooms having no odor (and vice versa), Edible mushrooms having the 
+woods as a habitat (and vice versa), Poisonous mushrooms having a foul odor 
+(and vice versa), Mushrooms from the woods having no odor (and vice versa), and 
+edible mushrooms from the woods having no odor.  The rules with the highest 
+confidence were about cap-color, but the support was low.  No rules had support
+higher than 50%.  The rules with the highest support were about edible mushrooms 
+having no odor (and vice versa) and mushrooms from the woods being edible.
+    Adding more attributes to the mushroom dataset makes it take more time to 
+compute all the rules.  The initial attributes we used were Edibleness, 
+Cap-color, Odor, and Habitat attributes.  Adding Cap-shape and Cap-surface 
+didn't provide many rules reaching minimum support of 0.10 and minimum confidence 
+of 0.70.  Adding bruises was a bit more interesting, showing that if the 
+mushroom is edible it is likely to have bruises (and vice versa), if the 
+mushroom is poisonous it is unlikely to have bruises, if the mushroom is red it
+is likely to have bruises, if the mushroom's habitat is the woods it likely has 
+bruises, if the mushroom's odor is foul it likely does not have bruises, if the 
+mushroom is edible with a convex cap-shape it is likely bruised, and if the 
+mushroom is edible with an at cap-shape it is likely bruised.  Adding 
+Gill-attachment, Gill-size, Gill-color, Stalk-shape, and Stalk-root greatly 
+increased the time needed to make all of the rules.  It took long enough that we 
+gave up trying to create rules with 12 attributes and decreased the attributes 
+to Edibleness, Odor, Gill-attachment, Gill-size, Stalk-shape, and Stalk-root.  
+This gave us a variety of rules - the one with the highest support was 
+gill-attachment being free if the gill-size is broad (and vice versa).  Rules 
+with the highest confidence mostly had to do with free gill-attachment or odor 
+being foul.
+
+Actual results for these things can be seen in the output file.

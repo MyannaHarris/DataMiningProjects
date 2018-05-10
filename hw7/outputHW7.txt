@@ -1,0 +1,219 @@
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule                   support    confidence      lift
+-------------------------------  ---------  ------------  --------
+0 Class=first => Age=adult        0.118582      0.915789  0.963505
+1 Class=second => Age=adult       0.284871      0.888102  0.934375
+2 Class=third => Age=adult        0.40209       1         1.0521
+3 Class=third => Gender=female    0.39164       0.974011  1.23847
+4 Class=crew => Age=adult         0.144934      0.981538  1.03268
+5 Gender=female => Age=adult      0.757383      0.963027  1.0132
+6 Gender=male => Age=adult        0.193094      0.904255  0.95137
+7 Survival=yes => Age=adult       0.653339      0.965101  1.01539
+8 Survival=no => Age=adult        0.297138      0.919831  0.967757
+9 Survival=yes => Gender=female   0.619718      0.915436  1.16399
+===========================================
+Mushroom Dataset
+===========================================
+association rule                                        support    confidence     lift
+----------------------------------------------------  ---------  ------------  -------
+0 Cap-color=brown => Edibleness=edible                 0.181432      0.879725  1.4235
+1 Cap-color=red => Edibleness=edible                   0.102055      0.979592  1.5851
+2 Odor=none => Edibleness=edible                       0.476258      0.9683    1.56682
+3 Odor=foul => Edibleness=poisonous                    0.280652      1         2.61781
+4 Cap-color=red => Odor=none                           0.102055      0.979592  1.99165
+5 Cap-color=red => Habitat=woods                       0.104181      1         2.26485
+6 Edibleness=edible and Cap-color=brown => Odor=none   0.164422      0.90625   1.84253
+7 Edibleness=edible and Cap-color=gray => Odor=none    0.157335      1         2.03314
+8 Edibleness=edible and Cap-color=red => Odor=none     0.102055      1         2.03314
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule                                                  support    confidence      lift
+--------------------------------------------------------------  ---------  ------------  --------
+0 Class=second => Age=adult                                      0.284871      0.888102  0.934375
+1 Class=second => Gender=female                                  0.231713      0.72238   0.91852
+2 Class=second => Survival=yes                                   0.239891      0.747875  1.10475
+3 Class=third => Age=adult                                       0.40209       1         1.0521
+4 Class=third => Gender=female                                   0.39164       0.974011  1.23847
+5 Class=third => Survival=yes                                    0.30577       0.760452  1.12333
+6 Age=adult => Gender=female                                     0.757383      0.796845  1.0132
+7 Gender=female => Age=adult                                     0.757383      0.963027  1.0132
+8 Survival=yes => Age=adult                                      0.653339      0.965101  1.01539
+9 Survival=no => Age=adult                                       0.297138      0.919831  0.967757
+10 Gender=female => Survival=yes                                 0.619718      0.787984  1.16399
+11 Survival=yes => Gender=female                                 0.619718      0.915436  1.16399
+12 Class=second and Gender=female => Age=adult                   0.209905      0.905882  0.953082
+13 Class=second and Age=adult => Gender=female                   0.209905      0.736842  0.936909
+14 Class=second and Survival=yes => Age=adult                    0.216265      0.901515  0.948487
+15 Class=second and Age=adult => Survival=yes                    0.216265      0.759171  1.12143
+16 Class=third and Gender=female => Age=adult                    0.39164       1         1.0521
+17 Class=third and Survival=yes => Age=adult                     0.30577       1         1.0521
+18 Gender=female and Survival=yes => Age=adult                   0.603816      0.97434   1.02511
+19 Class=third and Gender=female and Survival=yes => Age=adult   0.304407      1         1.0521
+===========================================
+Mushroom Dataset
+===========================================
+association rule                        support    confidence     lift
+------------------------------------  ---------  ------------  -------
+0 Edibleness=edible => Odor=none       0.476258      0.770642  1.56682
+1 Odor=none => Edibleness=edible       0.476258      0.9683    1.56682
+2 Habitat=woods => Edibleness=edible   0.324592      0.735152  1.18956
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule                                 support    confidence     lift
+---------------------------------------------  ---------  ------------  -------
+0 Age=adult => Gender=female                    0.757383      0.796845  1.0132
+1 Gender=female => Age=adult                    0.757383      0.963027  1.0132
+2 Age=adult => Survival=yes                     0.653339      0.68738   1.01539
+3 Survival=yes => Age=adult                     0.653339      0.965101  1.01539
+4 Gender=female => Survival=yes                 0.619718      0.787984  1.16399
+5 Survival=yes => Gender=female                 0.619718      0.915436  1.16399
+6 Gender=female and Survival=yes => Age=adult   0.603816      0.97434   1.02511
+7 Age=adult and Survival=yes => Gender=female   0.603816      0.9242    1.17514
+8 Age=adult and Gender=female => Survival=yes   0.603816      0.797241  1.17767
+===========================================
+Mushroom Dataset
+===========================================
+association rule    support    confidence    lift
+------------------  ---------  ------------  ------
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule                                 support    confidence     lift
+---------------------------------------------  ---------  ------------  -------
+0 Age=adult => Gender=female                    0.757383      0.796845  1.0132
+1 Gender=female => Age=adult                    0.757383      0.963027  1.0132
+2 Age=adult => Survival=yes                     0.653339      0.68738   1.01539
+3 Survival=yes => Age=adult                     0.653339      0.965101  1.01539
+4 Gender=female => Survival=yes                 0.619718      0.787984  1.16399
+5 Survival=yes => Gender=female                 0.619718      0.915436  1.16399
+6 Gender=female and Survival=yes => Age=adult   0.603816      0.97434   1.02511
+7 Age=adult and Survival=yes => Gender=female   0.603816      0.9242    1.17514
+8 Age=adult and Gender=female => Survival=yes   0.603816      0.797241  1.17767
+===========================================
+Mushroom Dataset
+===========================================
+association rule                                      support    confidence     lift
+--------------------------------------------------  ---------  ------------  -------
+0 Edibleness=edible => Odor=none                     0.476258      0.770642  1.56682
+1 Odor=none => Edibleness=edible                     0.476258      0.9683    1.56682
+2 Edibleness=edible => Habitat=woods                 0.324592      0.525229  1.18956
+3 Habitat=woods => Edibleness=edible                 0.324592      0.735152  1.18956
+4 Edibleness=poisonous => Odor=foul                  0.280652      0.734694  2.61781
+5 Odor=foul => Edibleness=poisonous                  0.280652      1         2.61781
+6 Odor=none => Habitat=woods                         0.307583      0.62536   1.41635
+7 Habitat=woods => Odor=none                         0.307583      0.696629  1.41635
+8 Edibleness=edible and Habitat=woods => Odor=none   0.307583      0.947598  1.9266
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule    support    confidence    lift
+------------------  ---------  ------------  ------
+===========================================
+Mushroom Dataset
+===========================================
+association rule                                           support    confidence     lift
+-------------------------------------------------------  ---------  ------------  -------
+0 Cap-color=brown => Edibleness=edible                    0.181432      0.879725  1.4235
+1 Cap-color=red => Edibleness=edible                      0.102055      0.979592  1.5851
+2 Edibleness=edible => Odor=none                          0.476258      0.770642  1.56682
+3 Odor=none => Edibleness=edible                          0.476258      0.9683    1.56682
+4 Habitat=woods => Edibleness=edible                      0.324592      0.735152  1.18956
+5 Edibleness=poisonous => Odor=foul                       0.280652      0.734694  2.61781
+6 Odor=foul => Edibleness=poisonous                       0.280652      1         2.61781
+7 Cap-color=brown => Odor=none                            0.164422      0.797251  1.62092
+8 Cap-color=red => Odor=none                              0.102055      0.979592  1.99165
+9 Cap-color=red => Habitat=woods                          0.104181      1         2.26485
+10 Edibleness=edible and Cap-shape=convex => Odor=none    0.233168      0.7669    1.55922
+11 Edibleness=edible and Cap-shape=at => Odor=none        0.233168      0.90137   1.83261
+12 Edibleness=edible and Cap-surface=brous => Odor=none   0.242381      0.966102  1.96422
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule    support    confidence    lift
+------------------  ---------  ------------  ------
+===========================================
+Mushroom Dataset
+===========================================
+association rule                                                support    confidence     lift
+------------------------------------------------------------  ---------  ------------  -------
+0 Cap-color=brown => Edibleness=edible                         0.181432      0.879725  1.4235
+1 Cap-color=red => Edibleness=edible                           0.102055      0.979592  1.5851
+2 Edibleness=edible => Bruises=bruises                         0.453579      0.733945  1.301
+3 Bruises=bruises => Edibleness=edible                         0.453579      0.80402   1.301
+4 Edibleness=edible => Odor=none                               0.476258      0.770642  1.56682
+5 Odor=none => Edibleness=edible                               0.476258      0.9683    1.56682
+6 Habitat=woods => Edibleness=edible                           0.324592      0.735152  1.18956
+7 Edibleness=poisonous => Bruises=no                           0.271439      0.710575  1.63028
+8 Edibleness=poisonous => Odor=foul                            0.280652      0.734694  2.61781
+9 Odor=foul => Edibleness=poisonous                            0.280652      1         2.61781
+10 Cap-color=brown => Odor=none                                0.164422      0.797251  1.62092
+11 Cap-color=red => Bruises=bruises                            0.102055      0.979592  1.73644
+12 Cap-color=red => Odor=none                                  0.102055      0.979592  1.99165
+13 Cap-color=red => Habitat=woods                              0.104181      1         2.26485
+14 Habitat=woods => Bruises=bruises                            0.323175      0.731942  1.29745
+15 Odor=foul => Bruises=no                                     0.229624      0.818182  1.87716
+16 Edibleness=edible and Cap-shape=convex => Bruises=bruises   0.22679       0.745921  1.32223
+17 Edibleness=edible and Cap-shape=convex => Odor=none         0.233168      0.7669    1.55922
+18 Edibleness=edible and Cap-shape=at => Bruises=bruises       0.181432      0.70137   1.24326
+19 Edibleness=edible and Cap-shape=at => Odor=none             0.233168      0.90137   1.83261
+20 Edibleness=edible and Cap-surface=brous => Odor=none        0.242381      0.966102  1.96422
+kristina@Jade:~/Dropbox/stuff/fall 2016$ python hw7.py 
+===========================================
+Titanic Dataset
+===========================================
+association rule    support    confidence    lift
+------------------  ---------  ------------  ------
+===========================================
+Mushroom Dataset
+===========================================
+association rule                                                 support    confidence      lift
+-------------------------------------------------------------  ---------  ------------  --------
+0 Edibleness=edible => Odor=none                                0.476258      0.770642  1.56682
+1 Odor=none => Edibleness=edible                                0.476258      0.9683    1.56682
+2 Edibleness=edible => Gill-attachment=free                     0.618001      1         1.0032
+3 Edibleness=edible => Gill-size=broad                          0.575478      0.931193  1.0639
+4 Edibleness=edible => Stalk-shape=tapering                     0.459249      0.743119  1.45631
+5 Stalk-shape=tapering => Edibleness=edible                     0.459249      0.9       1.45631
+6 Stalk-root=equal => Edibleness=edible                         0.153083      0.771429  1.24826
+7 Edibleness=poisonous => Odor=foul                             0.280652      0.734694  2.61781
+8 Odor=foul => Edibleness=poisonous                             0.280652      1         2.61781
+9 Edibleness=poisonous => Gill-attachment=free                  0.378809      0.991651  0.994824
+10 Edibleness=poisonous => Gill-size=broad                      0.299787      0.784787  0.896627
+11 Edibleness=poisonous => Stalk-shape=enlarging                0.330971      0.866419  1.7692
+12 Edibleness=poisonous => Stalk-root=bulbous                   0.328845      0.860853  1.28672
+13 Odor=foul => Gill-attachment=free                            0.280652      1         1.0032
+14 Odor=foul => Gill-size=broad                                 0.280652      1         1.14251
+15 Odor=foul => Stalk-shape=enlarging                           0.229624      0.818182  1.6707
+16 Odor=foul => Stalk-root=bulbous                              0.280652      1         1.4947
+17 Odor=none => Gill-attachment=free                            0.49185       1         1.0032
+18 Odor=none => Gill-size=broad                                 0.463501      0.942363  1.07666
+19 Odor=none => Stalk-shape=tapering                            0.44224       0.899135  1.76206
+20 Stalk-shape=tapering => Odor=none                            0.44224       0.866667  1.76206
+21 Stalk-root=equal => Odor=none                                0.153083      0.771429  1.56842
+22 Gill-attachment=free => Gill-size=broad                      0.872077      0.874867  0.999544
+23 Gill-size=broad => Gill-attachment=free                      0.872077      0.996356  0.999544
+24 Gill-size=narrow => Gill-attachment=free                     0.124734      1         1.0032
+25 Stalk-shape=enlarging => Gill-attachment=free                0.486534      0.993488  0.996666
+26 Stalk-shape=tapering => Gill-attachment=free                 0.510276      1         1.0032
+27 Stalk-root=bulbous => Gill-attachment=free                   0.669029      1         1.0032
+28 Stalk-root=equal => Gill-attachment=free                     0.198441      1         1.0032
+29 Stalk-shape=enlarging => Gill-size=broad                     0.381999      0.780029  0.891191
+30 Stalk-shape=tapering => Gill-size=broad                      0.493267      0.966667  1.10443
+31 Stalk-root=bulbous => Gill-size=broad                        0.608079      0.908898  1.03843
+32 Gill-size=narrow => Stalk-shape=enlarging                    0.107725      0.863636  1.76352
+33 Stalk-shape=tapering => Stalk-root=bulbous                   0.374203      0.733333  1.09612
+34 Edibleness=edible and Gill-attachment=free => Odor=none      0.476258      0.770642  1.56682
+35 Edibleness=edible and Gill-size=broad => Odor=none           0.450744      0.783251  1.59246
+36 Odor=foul and Gill-attachment=free => Edibleness=poisonous   0.280652      1         2.61781
+37 Odor=foul and Gill-size=broad => Edibleness=poisonous        0.280652      1         2.61781
+

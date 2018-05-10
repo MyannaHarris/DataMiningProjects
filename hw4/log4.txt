@@ -1,0 +1,18 @@
+Myanna Harris
+Kristina Spring
+HW4 Log
+Data Mining
+
+1) 
+If there is 0 occurances of one attribute, the total probability becomes 0.
+Used methods to set up general class probabilities so we wouldn't have to calculate it multiple times.
+It is hard to keep this methods general, especially with the special rankings.
+
+2) 
+The continuous requires more total stats.
+It is pretty close to the same code but its easier to make new methods for it.
+
+3) 
+Assumed that if the categorical values didn't equal each other, they had a difference of 1.
+Takes a few seconds to finish.
+K-NN was doing really bad based upon some code we used from the previous assignment - ignoring lines that were the same majorly skewed our data to almost always return the wrong classification.
